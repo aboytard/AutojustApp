@@ -13,7 +13,8 @@ namespace AutojustApp.Server.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetProfessionalList")]
+        [HttpGet]
+        [Route("/professionals")]
         public IEnumerable<Professional> GetProfessionalList()
         {
             var professionals = new List<Professional>() 
@@ -33,7 +34,8 @@ namespace AutojustApp.Server.Controllers
             return professionals;
         }
 
-        [HttpGet(Name = "GetProfessional")]
+        [HttpGet]
+        [Route("/professional")]
         public Professional GetProfessional(string name)
         {
             return new Professional()
@@ -43,7 +45,8 @@ namespace AutojustApp.Server.Controllers
             };
         }
 
-        [HttpPost(Name = "PostProfessional")]
+        [HttpPost]
+        [Route("/professional")]
         public Professional Post(Professional professional)
         {
             return professional;
