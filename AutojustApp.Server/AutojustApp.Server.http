@@ -1,0 +1,6 @@
+@AutojustApp.Server_HostAddress = http://localhost:5094
+
+GET {{AutojustApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
