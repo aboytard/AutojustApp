@@ -6,7 +6,7 @@
 
         public string PhoneNumber { get; set; }
 
-        public List<int> Departements { get; set; }
+        public List<int> Locations { get; set; }
 
         public int Ranking { get; set; }
 

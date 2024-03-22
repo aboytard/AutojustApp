@@ -4,30 +4,28 @@ namespace ProfessionalService
 {
     // ATTENTION : Possibilite qu un professionel doivent repondre a plusieurs demandes en meme temps
     // il y aurait des soucis
-    public class ProfessionalProcessor
+    public class WorkerProcessor
     {
 
-        private Professional professional;
-        public ProfessionalProcessor(Professional professional) 
+        private Worker professional;
+        public WorkerProcessor(Worker professional) 
         {
             this.professional = professional;
 
             professional.OnAnswerReceived += OnAnswerReceivedHandler;
         }
 
-        public async Task HandleDemand(Inspection inspection)
+        public async Task HandleInspectionDemand(Inspection inspection)
         {
             // send message to 
             await SendMessageToProfessional(inspection);
             await WaitForProfessionalAnswer(inspection, professional);
         }
 
-
-
         private TaskCompletionSource professionalCommand;
         protected CancellationTokenSource professionalCommandCancellationToken;
         private int waitForProfessionalAnswerTimeout = 20 * 60 * 1000; // 20 min
-        public async Task WaitForProfessionalAnswer(Inspection inspection, Professional professional)
+        public async Task WaitForProfessionalAnswer(Inspection inspection, Worker professional)
         {
             professionalCommandCancellationToken = new CancellationTokenSource(waitForProfessionalAnswerTimeout);
             professionalCommand = new TaskCompletionSource();

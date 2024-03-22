@@ -1,4 +1,6 @@
-﻿namespace SharedLibrary
+﻿using SharedLibrary.Enum;
+
+namespace SharedLibrary
 {
     public class Inspection
     {
@@ -8,22 +10,17 @@
 
         public VehicleType VehicleType { get; set; }
 
-        public int Department { get; set; }
+        public int Location { get; set; }
         public int OrderNumber { get; set; }
 
-        public Worker Professional { get; set; }
+        public Worker Worker { get; set; }
 
-        public void AssignInspectionToProfessional(Worker professional)
+        public void AssignInspectionToProfessional(Worker worker)
         {
-            this.Professional = professional;
+            this.Worker = worker;
             this.OrderNumber = 1; // TODO : Should assign a random number
         }
 
     }
 
-    public enum VehicleType
-    {
-        None,
-        Car
-    }
 }

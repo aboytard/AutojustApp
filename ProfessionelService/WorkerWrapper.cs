@@ -16,7 +16,7 @@ namespace ProfessionalService
         {
             var professionals = GetProfessionals();
             return professionals
-                .Where(professional => professional.Departements.Contains(department))
+                .Where(professional => professional.Locations.Contains(department))
                 .OrderBy(pro => pro.Ranking);
 
         }
@@ -27,7 +27,7 @@ namespace ProfessionalService
             foreach(Worker professional in professionals)
             {
                 var professionalProfessor = new WorkerProcessor(professional);
-                await professionalProfessor.HandleDemand(inspection);
+                await professionalProfessor.HandleInspectionDemand(inspection);
             }
         }
 
@@ -39,7 +39,7 @@ namespace ProfessionalService
         {
             // should be inside the command service
             var inspectionAssigned = new Inspection();
-            inspectionAssigned.Professional = professional;
+            inspectionAssigned.Worker = professional;
         }
 
 

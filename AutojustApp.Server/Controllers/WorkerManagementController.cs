@@ -16,7 +16,7 @@ namespace AutojustApp.Server.Controllers
 
         [HttpGet]
         [Route("/workers")]
-        public IEnumerable<Professional> GetProfessionalList()
+        public IEnumerable<Worker> GetProfessionalList()
         {
             var professionals = MockData.MockProfessional();
             return professionals;
@@ -24,9 +24,9 @@ namespace AutojustApp.Server.Controllers
 
         [HttpGet]
         [Route("/worker/{name}")]
-        public Professional GetProfessional(string name)
+        public Worker GetProfessional(string name)
         {
-            return new Professional()
+            return new Worker()
             {
                 Name = name,
                 PhoneNumber = "numberOf" + name
@@ -34,8 +34,8 @@ namespace AutojustApp.Server.Controllers
         }
 
         [HttpPost]
-        [Route("/professional")]
-        public Professional Post(Professional professional)
+        [Route("/worker")]
+        public Worker Post(Worker professional)
         {
             return professional;
         }

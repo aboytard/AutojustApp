@@ -10,21 +10,21 @@
                     {
                         Name = "Alban",
                         PhoneNumber = "numberOfAlban",
-                        Departements = {92},
+                        Locations = {92},
                         Ranking = 1
                     },
                 new Worker()
                     {
                         Name = "Kane",
                         PhoneNumber = "numberOfKane",
-                        Departements = {78},
+                        Locations = {78},
                         Ranking = 2
                     },
                 new Worker()
                     {
                         Name = "Greg",
                         PhoneNumber = "numberOfGreg",
-                        Departements = {78,94,92},
+                        Locations = {78,94,92},
                         Ranking = 3
                     }
             };
