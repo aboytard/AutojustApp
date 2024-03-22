@@ -1,6 +1,6 @@
 ﻿using SharedLibrary.Enum;
 
-namespace SharedLibrary
+namespace SharedLibrary.Entities
 {
     public class Inspection
     {
@@ -17,8 +17,8 @@ namespace SharedLibrary
 
         public void AssignInspectionToProfessional(Worker worker)
         {
-            this.Worker = worker;
-            this.OrderNumber = 1; // TODO : Should assign a random number
+            Worker = worker;
+            OrderNumber = 1; // TODO : Should assign a random number
         }
 
     }

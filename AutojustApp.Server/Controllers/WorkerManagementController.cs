@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SharedLibrary;
+using SharedLibrary.Entities;
 
 namespace AutojustApp.Server.Controllers
 {
