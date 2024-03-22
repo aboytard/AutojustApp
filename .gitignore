@@ -10,3 +10,7 @@ ProfessionalServiceTest/obj
 ProfessionalServiceTest/bin
 SharedLibrary/obj
 LoggingService/obj
+CommandService/bin
+ProfessionelService/bin
+SharedLibrary/bin
+LoggingService/bin

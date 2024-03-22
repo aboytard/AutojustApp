@@ -7,11 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutojustApp.Server", "Autoj
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "autojustapp.client", "autojustapp.client\autojustapp.client.esproj", "{20CAAEC5-DA3E-44D5-89A1-41C712A5724C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalService", "ProfessionelService\ProfessionalService.csproj", "{970A5265-9203-48EA-BE17-07B46970D39E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService", "ProfessionelService\WorkerService.csproj", "{970A5265-9203-48EA-BE17-07B46970D39E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{E5AF115A-27AB-461B-98A3-BDFAEE7A4851}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalServiceTest", "ProfessionalServiceTest\ProfessionalServiceTest.csproj", "{AB5374A5-6113-49AD-BE91-948290D82ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InspectionService", "CommandService\InspectionService.csproj", "{2BC9BAE8-22DF-4FC0-A331-C8FCCCC0F553}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{396F8AA0-DB74-4968-B82E-5FEEEA723C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingService", "LoggingService\LoggingService.csproj", "{F4039E4C-0F57-4A25-974C-7BDBE34BA447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,9 +47,20 @@ Global
 		{AB5374A5-6113-49AD-BE91-948290D82ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB5374A5-6113-49AD-BE91-948290D82ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB5374A5-6113-49AD-BE91-948290D82ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC9BAE8-22DF-4FC0-A331-C8FCCCC0F553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC9BAE8-22DF-4FC0-A331-C8FCCCC0F553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC9BAE8-22DF-4FC0-A331-C8FCCCC0F553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC9BAE8-22DF-4FC0-A331-C8FCCCC0F553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4039E4C-0F57-4A25-974C-7BDBE34BA447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4039E4C-0F57-4A25-974C-7BDBE34BA447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4039E4C-0F57-4A25-974C-7BDBE34BA447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4039E4C-0F57-4A25-974C-7BDBE34BA447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4039E4C-0F57-4A25-974C-7BDBE34BA447} = {396F8AA0-DB74-4968-B82E-5FEEEA723C13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {124B3845-7DD6-4DDD-AAAD-E55129A3BED7}

@@ -1,4 +1,4 @@
-﻿using SharedLibrary;
+﻿using SharedLibrary.Entities;
 
 namespace CommandService
 {
