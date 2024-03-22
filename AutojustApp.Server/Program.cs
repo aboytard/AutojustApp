@@ -1,4 +1,21 @@
+using LoggingService;
+using NLog;
+using NLog.Extensions.Logging;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+
+var config = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+        .AddEnvironmentVariables()
+        .Build();
+
+LogManager.Configuration = new NLogLoggingConfiguration(config.GetSection("NLog"));
+builder.Logging.AddNLog();
+
+builder.Services.AddSingleton(typeof(ILogService<>), typeof(LogService<>));
 
 // Add services to the container.
 
