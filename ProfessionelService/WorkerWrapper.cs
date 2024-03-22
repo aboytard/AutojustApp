@@ -2,17 +2,17 @@
 
 namespace ProfessionalService
 {
-    public class ProfessionalWrapper
+    public class WorkerWrapper
     {
-        public ProfessionalWrapper() { }
+        public WorkerWrapper() { }
 
-        public IEnumerable<Professional> GetProfessionals()
+        public IEnumerable<Worker> GetProfessionals()
         {
             var professionals = MockData.MockProfessional();
             return professionals; 
         }
         
-        public IEnumerable<Professional> SelectPossibleProfessionals(int department)
+        public IEnumerable<Worker> SelectPossibleProfessionals(int department)
         {
             var professionals = GetProfessionals();
             return professionals
@@ -21,12 +21,12 @@ namespace ProfessionalService
 
         }
 
-        public async Task SendMessageToProfessional(Inspection inspection, IEnumerable<Professional> professionals)
+        public async Task SendMessageToProfessional(Inspection inspection, IEnumerable<Worker> professionals)
         {
             Console.WriteLine("SendMessageToProfessional");
-            foreach(Professional professional in professionals)
+            foreach(Worker professional in professionals)
             {
-                var professionalProfessor = new ProfessionalProcessor(professional);
+                var professionalProfessor = new WorkerProcessor(professional);
                 await professionalProfessor.HandleDemand(inspection);
             }
         }
@@ -35,7 +35,7 @@ namespace ProfessionalService
         // TODO : Refactor with a void
 
         // Il devrait y avoir un service entre les deux Professionel-Inspection
-        public void AssignInspectionToProfessional(Professional professional)
+        public void AssignInspectionToProfessional(Worker professional)
         {
             // should be inside the command service
             var inspectionAssigned = new Inspection();

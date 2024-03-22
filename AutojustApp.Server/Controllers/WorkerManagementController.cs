@@ -5,17 +5,17 @@ namespace AutojustApp.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProfessionalManagementController : ControllerBase 
+    public class WorkerManagementController : ControllerBase 
     {
-        private readonly ILogger<ProfessionalManagementController> _logger;
+        private readonly ILogger<WorkerManagementController> _logger;
 
-        public ProfessionalManagementController(ILogger<ProfessionalManagementController> logger)
+        public WorkerManagementController(ILogger<WorkerManagementController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        [Route("/professionals")]
+        [Route("/workers")]
         public IEnumerable<Professional> GetProfessionalList()
         {
             var professionals = MockData.MockProfessional();
@@ -23,7 +23,7 @@ namespace AutojustApp.Server.Controllers
         }
 
         [HttpGet]
-        [Route("/professional")]
+        [Route("/worker/{name}")]
         public Professional GetProfessional(string name)
         {
             return new Professional()

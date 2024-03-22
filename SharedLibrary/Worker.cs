@@ -1,6 +1,6 @@
 ﻿namespace SharedLibrary
 {
-    public class Professional
+    public class Worker
     {
         public string Name { get; set; }
 

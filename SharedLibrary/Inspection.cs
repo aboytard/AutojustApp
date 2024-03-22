@@ -11,9 +11,9 @@
         public int Department { get; set; }
         public int OrderNumber { get; set; }
 
-        public Professional Professional { get; set; }
+        public Worker Professional { get; set; }
 
-        public void AssignInspectionToProfessional(Professional professional)
+        public void AssignInspectionToProfessional(Worker professional)
         {
             this.Professional = professional;
             this.OrderNumber = 1; // TODO : Should assign a random number

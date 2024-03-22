@@ -2,25 +2,25 @@
 {
     public static class MockData
     {
-        public static IEnumerable<Professional> MockProfessional()
+        public static IEnumerable<Worker> MockProfessional()
         {
-            var professionals = new List<Professional>()
+            var professionals = new List<Worker>()
             {
-                new Professional()
+                new Worker()
                     {
                         Name = "Alban",
                         PhoneNumber = "numberOfAlban",
                         Departements = {92},
                         Ranking = 1
                     },
-                new Professional()
+                new Worker()
                     {
                         Name = "Kane",
                         PhoneNumber = "numberOfKane",
                         Departements = {78},
                         Ranking = 2
                     },
-                new Professional()
+                new Worker()
                     {
                         Name = "Greg",
                         PhoneNumber = "numberOfGreg",
