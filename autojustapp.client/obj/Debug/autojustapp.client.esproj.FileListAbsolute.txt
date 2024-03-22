@@ -1,1 +1,0 @@
-/Users/kane/Development/AutojustApp/autojustapp.client/obj/Debug/autojustapp.client.esproj.CoreCompileInputs.cache
