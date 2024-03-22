@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SharedLibrary;
 
 namespace AutojustApp.Server.Controllers
 {
@@ -17,20 +18,7 @@ namespace AutojustApp.Server.Controllers
         [Route("/professionals")]
         public IEnumerable<Professional> GetProfessionalList()
         {
-            var professionals = new List<Professional>() 
-            {
-                new Professional()
-                    {
-                        Name = "Alban",
-                        PhoneNumber = "numberOfAlban"
-                    },
-                new Professional()
-                    {
-                        Name = "Kane",
-                        PhoneNumber = "numberOfKane"
-                    },
-            };
-
+            var professionals = MockData.MockProfessional();
             return professionals;
         }
 

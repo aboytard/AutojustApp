@@ -4,3 +4,8 @@
 AutojustApp.Server/bin
 autojustapp.client/obj
 AutojustApp.Server/bin
+CommandService/obj
+ProfessionelService/obj
+ProfessionalServiceTest/obj
+ProfessionalServiceTest/bin
+SharedLibrary/obj
