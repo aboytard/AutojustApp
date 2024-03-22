@@ -4,7 +4,6 @@ using SharedLibrary.DTO;
 using SharedLibrary.Entities;
 using SharedLibrary.Interfaces;
 using System.Data.SQLite;
-using System.Xml.Linq;
 using WorkerService.Database;
 
 namespace WorkerService
