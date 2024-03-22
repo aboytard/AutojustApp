@@ -15,7 +15,7 @@ namespace WorkerService
 
         // GET current file where we are --> check differences for MAC and Windows
         private string workDir;
-        private const string storageFileProfessionel = "SearchDocumentation.db";
+        private const string storageFileProfessionel = "Worker.db";
         private string _connectionString;
 
         private DbProvider _dbProvider;
