@@ -15,10 +15,10 @@ namespace ProfessionalService
         
         public IEnumerable<Worker> SelectPossibleProfessionals(int department)
         {
-            var professionals = GetProfessionals();
-            return professionals
-                .Where(professional => professional.Locations.Contains(department))
-                .OrderBy(pro => pro.Ranking);
+            var workers = GetProfessionals();
+            return workers
+                .Where(worker => worker.Location == department)
+                .OrderBy(worker => worker.Ranking);
 
         }
 

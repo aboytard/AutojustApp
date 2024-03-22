@@ -1,6 +1,7 @@
 using LoggingService;
 using NLog;
 using NLog.Extensions.Logging;
+using SharedLibrary.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ LogManager.Configuration = new NLogLoggingConfiguration(config.GetSection("NLog"
 builder.Logging.AddNLog();
 
 builder.Services.AddSingleton(typeof(ILogService<>), typeof(LogService<>));
+builder.Services.AddSingleton<IWorkerServiceManager, IWorkerServiceManager>();
 
 // Add services to the container.
 

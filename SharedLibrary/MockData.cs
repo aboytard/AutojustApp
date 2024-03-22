@@ -1,4 +1,6 @@
-﻿namespace SharedLibrary
+﻿using SharedLibrary.Entities;
+
+namespace SharedLibrary
 {
     public static class MockData
     {
@@ -10,21 +12,21 @@
                     {
                         Name = "Alban",
                         PhoneNumber = "numberOfAlban",
-                        Locations = {92},
+                        Location = 92,
                         Ranking = 1
                     },
                 new Worker()
                     {
                         Name = "Kane",
                         PhoneNumber = "numberOfKane",
-                        Locations = {78},
+                        Location = 78,
                         Ranking = 2
                     },
                 new Worker()
                     {
                         Name = "Greg",
                         PhoneNumber = "numberOfGreg",
-                        Locations = {78,94,92},
+                        Location = 78,
                         Ranking = 3
                     }
             };
