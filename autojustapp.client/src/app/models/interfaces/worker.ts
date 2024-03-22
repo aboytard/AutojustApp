@@ -1,0 +1,10 @@
+export interface Worker {
+
+    id?: number;
+    name?: string;
+    surname?: string;
+    phoneNumber?: string;
+    email?: string;
+    address?: string;
+    city?: string;
+}
