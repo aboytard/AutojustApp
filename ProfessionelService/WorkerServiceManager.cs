@@ -54,6 +54,7 @@ namespace WorkerService
                 Worker worker;
                 using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
                 {
+                    await connection.OpenAsync();
                     worker = await _dbWrapper.Get(connection, name);
                 }
                 return new OperationResultWithData(worker);
@@ -71,6 +72,7 @@ namespace WorkerService
                 List<Worker> worker;
                 using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
                 {
+                    await connection.OpenAsync();
                     worker = await _dbWrapper.GetAll(connection);
                 }
                 return new OperationResultWithData(worker);

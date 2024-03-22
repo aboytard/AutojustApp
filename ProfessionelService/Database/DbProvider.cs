@@ -19,6 +19,7 @@ namespace WorkerService.Database
                 _logger = logger;
 
             _myConnectionString = connectionString;
+            SetWorkDir();
         }
 
         public async Task SetWorkDir()
@@ -42,7 +43,7 @@ namespace WorkerService.Database
                             name TEXT,
                             phoneNumber TEXT,
                             location TEXT,
-                            ranking INTEGER,
+                            ranking INTEGER
                             ); ";
         }
 
